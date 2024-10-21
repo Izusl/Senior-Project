@@ -1,0 +1,5 @@
+# Node.js specific ignores
+# Using npm install in terminal of this project will automatically install the correct node_modules
+node_modules/
+
+# Input any local trash or sensitive stuff here to not be pushed into git
