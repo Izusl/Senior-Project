@@ -7,13 +7,13 @@ We propose leveraging machine learning techniques and facial recognition technol
 ## Table of Contents
 
 - [Requirements](#requirements)
-- [How to Start](#how-to-start)
+- [How to Start](#how-to-build)
 
 ## Requirements
 
 To run this project, you will need the following:
 
-- Node.js (version 22.10.0 or higher)
+- Python (version 3.12.0 or higher)
 
 ## How to Build
 
@@ -21,6 +21,6 @@ To run this project, you will need the following:
 
    git clone https://github.com/Izusl/Senior-Project
 
-2. **Install Node.js Dependencies:**
+2. **Install Python Libraries Using pip:**
 
-   npm install
+   pip install -r requirements.txt
