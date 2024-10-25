@@ -19,7 +19,7 @@ def get_token():
     
     try:
         response = requests.post(token_url, headers=headers, data=data)
-        response.raise_for_status()  # Raise an error for bad responses
+        response.raise_for_status()
         access_token = response.json().get('access_token')
         print('Access Token:', access_token)
         return access_token
