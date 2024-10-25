@@ -1,8 +1,9 @@
-from get_spotify_token import get_token
+import get_token as gt
+import track_attributes as ta
 import spotipy
 
-def get_songs_by_emotion(emotion, limit=3):
-    access_token = get_token()
+def filter_by_valence(emotion, limit=3):
+    access_token = gt.get_token()
     
     if not access_token:
         print("Failed to retrieve access token.")
@@ -28,7 +29,7 @@ def get_songs_by_emotion(emotion, limit=3):
     
     for track in results['tracks']['items']:
         track_id = track['id']
-        features = sp.audio_features(track_id)[0]
+        features = ta.get_audio_features(track_id)
         
         if features and min_valence <= features['valence'] <= max_valence:
             song_ids.append(track_id)

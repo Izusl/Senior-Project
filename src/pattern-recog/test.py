@@ -1,12 +1,13 @@
 #import these to use the function
 import sys
 sys.path.insert(0, '../spotify-api')
-from id_by_valence import get_songs_by_emotion
+
+import track_attributes as ta
+import song_filter as sf
 #---------------------------------------
 
 # example
-sad_songs = get_songs_by_emotion("sad", limit=3)
-print("Sad Songs:", sad_songs)
 
-happy_songs = get_songs_by_emotion("happy", limit=3)
-print("Happy Songs:", happy_songs)
+songs = sf.filter_by_valence("sad", 1)
+print("Filtered ID's: ", songs)
+print("Song found: ", ta.get_basic_info(songs[0])['name'], " by ", ta.get_artist_details(songs[0])['artist_name'])
