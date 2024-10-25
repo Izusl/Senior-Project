@@ -1,1 +1,5 @@
 requests
+spotipy
+pandas
+numpy
+scikit-learn

@@ -1,16 +1,12 @@
 #import these to use the function
 import sys
 sys.path.insert(0, '../spotify-api')
-from get_song_id import get_song_id
+from emotions_get_id import get_songs_by_emotion
 #---------------------------------------
 
 # example
-song_name = "Imagine"
-artist_name = "John Lennon" #optional defaults null
-limit = 1 #optional defaults 1 dont do 99999999999 or you may get rate limited
+sad_songs = get_songs_by_emotion("sad", limit=3)
+print("Sad Songs:", sad_songs)
 
-song_ids = get_song_id(song_name, artist_name, limit)
-if song_ids:
-    print(f"Found song IDs: {song_ids}")
-else:
-    print("No songs found.")
+happy_songs = get_songs_by_emotion("happy", limit=3)
+print("Happy Songs:", happy_songs)

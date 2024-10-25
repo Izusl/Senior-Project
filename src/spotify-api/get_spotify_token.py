@@ -21,7 +21,6 @@ def get_token():
         response = requests.post(token_url, headers=headers, data=data)
         response.raise_for_status()
         access_token = response.json().get('access_token')
-        print('Access Token:', access_token)
         return access_token
     except requests.exceptions.RequestException as error:
         print('Error fetching token:', error)
