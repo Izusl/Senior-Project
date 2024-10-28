@@ -1,9 +1,9 @@
 import spotipy
 from spotipy.exceptions import SpotifyException
-import get_token as gt
+import token_cc as tc
 
 # Get the authorization api token
-access_token = gt.get_token()
+access_token = tc.token_cc()
 if not access_token:
     print("Failed to retrieve access token.")
 sp = spotipy.Spotify(auth=access_token)

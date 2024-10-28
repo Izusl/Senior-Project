@@ -1,9 +1,9 @@
-import get_token as gt
+import token_cc as tc
 import track_attributes as ta
 import spotipy
 
 def filter_by_valence(emotion, limit=3):
-    access_token = gt.get_token()
+    access_token = tc.token_cc()
     
     if not access_token:
         print("Failed to retrieve access token.")
